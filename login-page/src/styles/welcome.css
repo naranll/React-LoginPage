@@ -1,0 +1,9 @@
+.userInput {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+button {
+  width: 100px;
+}

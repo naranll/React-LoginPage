@@ -7,6 +7,8 @@ export default function WelcomePage(prop) {
     let [userName, setUserName] = useState("");
     let [password, setPassword] = useState("");
 
+    console.log("name at welcome:", userName)
+
     return <div className="userInput">
         <input onChange={(input) => setUserName(input.target.value)} type="text" placeholder="Username" />
         <input onChange={(input) => setPassword(input.target.value)} type="text" placeholder="Password" />

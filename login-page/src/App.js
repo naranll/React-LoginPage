@@ -17,11 +17,13 @@ function App() {
     if (users.map((user) => user.name === username && user.password === password)) {
       setIsLoggedIn(true);
       setCurrentUser(username);
+      console.log("loginstate:", isLoggedIn);
       console.log("successfully logged in");
     } else {
       console.log("username or password wrong");
     }
   }
+
 
   return (
     <div className="App">

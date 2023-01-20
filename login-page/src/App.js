@@ -14,15 +14,28 @@ function App() {
   const [currentUser, setCurrentUser] = useState(""); //save current user's name
 
   function checkLogin(username, password) {
-    if (users.map((user) => user.name === username && user.password === password)) {
-      setIsLoggedIn(true);
-      setCurrentUser(username);
-      console.log("loginstate:", isLoggedIn);
-      console.log("successfully logged in");
-    } else {
-      console.log("username or password wrong");
-    }
+    users.map((user) => {
+      if (user.name === username && user.password === password) {
+        setIsLoggedIn(true);
+        setCurrentUser(username);
+        console.log("loginstate: ", isLoggedIn);
+      } else {
+        console.log("user wrong");
+      }
+      return [username, password];
+    })
   }
+
+  // function checkLogin(username, password) {
+  //   if (users.map((user) => user.name === username && user.password === password)) {
+  //     setIsLoggedIn(true);
+  //     setCurrentUser(username);
+  //     console.log("loginstate:", isLoggedIn);
+  //     console.log("successfully logged in");
+  //   } else {
+  //     console.log("username or password wrong");
+  //   }
+  // }
 
 
   return (
